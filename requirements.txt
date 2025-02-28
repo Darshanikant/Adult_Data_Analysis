@@ -1,5 +1,5 @@
 streamlit
 scikit-learn
 pickle-mixin
-numpy==1.23.5
-catboost==1.2
+numpy
+catboost
