@@ -4,7 +4,7 @@ import numpy as np
 import base64
 
 # Load the trained model
-with open(r"C:\Users\sunil\DK\VSCODE\Resume project\Adult Data Analysis\salary_prediction_model.pkl", "rb") as model_file:
+with open("salary_prediction_model.pkl", "rb") as model_file:
     model = pickle.load(model_file)
 
 # Encoding mappings (Ensure these match the ones used during training)
