@@ -4,7 +4,7 @@ import numpy as np
 import base64
 
 # Load the trained model
-model = pickle.load(open(r"C:\Users\sunil\DK\VSCODE\Resume project\Adult Data Analysis\Salary prediction.pkl", "rb"))
+model = pickle.load(open("Salary prediction.pkl", "rb"))
 
 # Encoding mappings (Ensure these match the ones used during training)
 work_class_mapping = {"Private": 0, "Self-emp-not-inc": 1, "Self-emp-inc": 2, "Federal-gov": 3, "Local-gov": 4, "State-gov": 5, "Without-pay": 6, "Never-worked": 7}
@@ -33,7 +33,7 @@ def set_background(image_file):
     st.markdown(css_code, unsafe_allow_html=True)
 
 # Set the background image
-set_background(r"C:\Users\sunil\DK\VSCODE\Resume project\Adult Data Analysis\Screenshot 2025-02-28 122738.png")  # Make sure this image is in the same directory
+set_background(r"Screenshot 2025-02-28 122738.png")  # Make sure this image is in the same directory
 
 # Streamlit UI
 #st.set_page_config(page_title="Adult Salary Prediction", page_icon="💰", layout="wide")
