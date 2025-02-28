@@ -5,7 +5,7 @@ import base64
 
 # Load the trained model
 with open("salary_prediction_model.pkl", "rb") as model_file:
-    model = pickle.load(model_file)
+    model = pickle.load(model_file,encoding="latin1")
 
 # Encoding mappings (Ensure these match the ones used during training)
 work_class_mapping = {"Private": 0, "Self-emp-not-inc": 1, "Self-emp-inc": 2, "Federal-gov": 3, "Local-gov": 4, "State-gov": 5, "Without-pay": 6, "Never-worked": 7}
