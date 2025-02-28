@@ -2,7 +2,7 @@ import pandas as pd
 
 
 
-data=pd.read_csv(r"C:\Users\sunil\DK\DK Data Science\JYPITER FILE\Adult Salary prediction\adult.csv")
+data=pd.read_csv("adult.csv")
 
 # Dictionary of new column names with index positions
 new_column_names = {
