@@ -55,20 +55,22 @@ X_train=scaler.fit_transform(X_train)
 X_test=scaler.transform(X_test)
 
 
-import catboost as cb
+
 from sklearn.metrics import accuracy_score, confusion_matrix
 
 
-# Train CatBoost model
-cat_model = cb.CatBoostClassifier(verbose=0)
-cat_model.fit(X_train, y_train)
+import xgboost as xgb
+
+# Train XGBoost model
+xgb_model = xgb.XGBClassifier()
+xgb_model.fit(X_train, y_train)
 
 # Predict
-y_pred_cat = cat_model.predict(X_test)
+y_pred_xgb = xgb_model.predict(X_test)
 
 # Accuracy
-cat_accuracy = accuracy_score(y_test, y_pred_cat)
-print(f"CatBoost Model Accuracy: {cat_accuracy*100:.2f}%")
+xgb_accuracy = accuracy_score(y_test, y_pred_xgb)
+print(f"XGBoost Model Accuracy: {xgb_accuracy*100:.2f}%")
 
 new_data = [[35, 1, 10, 2, 1, 3, 1, 1,5000, 0, 40, 10]]  # Replace with actual values
 prediction = cat_model.predict(new_data)
