@@ -34,7 +34,7 @@ def set_background(image_file):
     st.markdown(css_code, unsafe_allow_html=True)
 
 # Set the background image
-set_background(r"C:\Users\sunil\DK\VSCODE\Resume project\Adult Data Analysis\Screenshot 2025-02-28 122738.png")  # Make sure this image is in the same directory
+set_background("Screenshot 2025-02-28 122738.png")  # Make sure this image is in the same directory
 
 # Streamlit UI
 #st.set_page_config(page_title="Adult Salary Prediction", page_icon="💰", layout="wide")
